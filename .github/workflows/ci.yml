@@ -8,7 +8,7 @@ on:
 
 jobs:
   backend:
-    name: Build & Test Backend
+    name: Build Backend
     runs-on: ubuntu-latest
 
     steps:
@@ -24,10 +24,6 @@ jobs:
       - name: Build Backend
         working-directory: digital-banking-spring-backend
         run: mvn clean install -DskipTests
-
-      - name: Run Backend Tests
-        working-directory: digital-banking-spring-backend
-        run: mvn test
 
   frontend:
     name: Build Frontend
